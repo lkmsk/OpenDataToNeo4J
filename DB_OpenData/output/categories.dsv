@@ -1,0 +1,21 @@
+categoryID:ID(CATEGORY-ID)|name|:LABEL
+100000|Werbeklasse (mit Beklebung)|TARIF
+100001|Kleinklasse (teilweise ohne Navi)|TARIF
+100002|Mini (teilweise ohne Navi)|TARIF
+100003|Kompaktklasse|TARIF
+100004|Zubehör|TARIF
+100005|Mittelklasse|TARIF
+100006|Komfortklasse|TARIF
+100007|Van-/Busklasse|TARIF
+100008|Oberklasse|TARIF
+100009|Transport I|TARIF
+100010|Transport II|TARIF
+100011|Transport III|TARIF
+100012|Sonderklasse (Alfa MiTo / Citroën DS3)|TARIF
+100013|Sonderklasse (Fiat 500)|TARIF
+100014|Sonderklasse (C-Klasse)|TARIF
+100015|Sonderklasse (Ka)|TARIF
+100020|Versicherung pro Fahrt|TARIF
+100053|Miniklasse Flughafen|TARIF
+100054|Kompaktklasse Flughafen|TARIF
+100055|Mittelklasse Flughafen|TARIF
