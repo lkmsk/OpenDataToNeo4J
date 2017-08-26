@@ -2,3 +2,5 @@ DB_OpenData/datasets/OPENDATA_BOOKING_CARSHARING.csv
 DB_OpenData/datasets/OPENDATA_CATEGORY_CARSHARING.csv
 DB_OpenData/datasets/OPENDATA_RENTAL_ZONE_CARSHARING.csv
 DB_OpenData/datasets/OPENDATA_VEHICLE_CARSHARING.csv
+bookings.dsv
+rel_booking_vehicle.dsv
