@@ -12,7 +12,7 @@ import org.neo4j.procedure.Description;
 import org.neo4j.procedure.Name;
 import org.neo4j.procedure.UserFunction;
 /**
- * MigrationPathSort
+ * BookingLabelsProcessor
  */
 public class BookingLabelsProcessor {
   // This gives us a log instance that outputs messages to the
@@ -71,7 +71,7 @@ public class BookingLabelsProcessor {
   @UserFunction
   @Description(
     "de.m.k.neo4j.ext.dbc.bookings.processLabelsOfBooking('<Delimited_LabelParts>', delimiter)" + 
-    "- extract from the given string with the given delimiter a migration path."
+    "- bring the labels of a booking in correct order."
     )
   public String processLabelsOfBooking(
     @Name("labels") String labels, 
@@ -81,7 +81,7 @@ public class BookingLabelsProcessor {
   @UserFunction
   @Description(
     "de.m.k.neo4j.ext.dbc.bookings.processLabelsOfBookingList(['<Delimited_LabelParts>','<Delimited_LabelParts>',...], delimiter)" + 
-    "- extract from the given list of strings with the given delimiter a list of migration paths."
+    "- bring the labels of more then one booking in correct order."
     )
   public List<String> processLabelsOfBookingList(
     @Name("labelsList") List<String> labelsList, 
