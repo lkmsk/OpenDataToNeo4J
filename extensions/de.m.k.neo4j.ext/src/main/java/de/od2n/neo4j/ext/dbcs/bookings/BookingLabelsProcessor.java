@@ -70,7 +70,7 @@ public class BookingLabelsProcessor {
   }
   @UserFunction
   @Description(
-    "de.m.k.neo4j.ext.dbc.bookings.processLabelsOfBooking('<Delimited_LabelParts>', delimiter)" + 
+    "de.od2n.neo4j.ext.dbcs.bookings.processLabelsOfBooking('<Delimited_LabelParts>', delimiter)" + 
     "- bring the labels of a booking in correct order."
     )
   public String processLabelsOfBooking(
@@ -80,7 +80,7 @@ public class BookingLabelsProcessor {
   }
   @UserFunction
   @Description(
-    "de.m.k.neo4j.ext.dbc.bookings.processLabelsOfBookingList(['<Delimited_LabelParts>','<Delimited_LabelParts>',...], delimiter)" + 
+    "de.od2n.neo4j.ext.dbcs.bookings.processLabelsOfBookingList(['<Delimited_LabelParts>','<Delimited_LabelParts>',...], delimiter)" + 
     "- bring the labels of more then one booking in correct order."
     )
   public List<String> processLabelsOfBookingList(
