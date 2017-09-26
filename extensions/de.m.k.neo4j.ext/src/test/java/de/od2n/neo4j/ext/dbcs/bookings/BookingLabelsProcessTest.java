@@ -63,30 +63,30 @@ public class BookingLabelsProcessTest {
     }
     @Test
     public void shouldSortBookingLabelsCorrectly() throws Throwable {
-      String result = runProcedureCall( "RETURN de.od2n.neo4j.ext.dbcs.bookings.processLabelsOfBooking('BOOKING|APP|KLEINKLASSE|SHORT_DISTANCE|MULTICITY|FORD','|') AS result", "result");
-      assertThat( result, equalTo( "BOOKING|KLEINKLASSE|APP|MULTICITY|FORD|SHORT_DISTANCE" ) );
+      String result = runProcedureCall( "RETURN de.od2n.neo4j.ext.dbcs.bookings.processLabelsOfBooking('BOOKING|APP|KLEINKLASSE|SHORT_DISTANCE|MULTICITY','|') AS result", "result");
+      assertThat( result, equalTo( "BOOKING|KLEINKLASSE|APP|MULTICITY|SHORT_DISTANCE" ) );
     }
     @Test(expected = RuntimeException.class)
     public void shouldNotSupportDuplicateWeightValues() throws Throwable {
-      runProcedureCall( "RETURN de.od2n.neo4j.ext.dbcs.bookings.processLabelsOfBooking('BOOKING|APP|KLEINKLASSE|SHORT_DISTANCE|MULTICITY|FORD|OPEL','|') AS result", "result");
+      runProcedureCall( "RETURN de.od2n.neo4j.ext.dbcs.bookings.processLabelsOfBooking('BOOKING|APP|KLEINKLASSE|SHORT_DISTANCE|MULTICITY|LONG_DISTANCE','|') AS result", "result");
     }
     @Test
     public void shouldFilterNotNeededBookingLabelParts() throws Throwable {
-      String result = runProcedureCall( "RETURN de.od2n.neo4j.ext.dbcs.bookings.processLabelsOfBooking('BOOKING|APP|KLEINKLASSE|SHORT_DISTANCE|MULTICITY|FORD|XYZ','|') AS result", "result");
+      String result = runProcedureCall( "RETURN de.od2n.neo4j.ext.dbcs.bookings.processLabelsOfBooking('BOOKING|APP|KLEINKLASSE|SHORT_DISTANCE|MULTICITY|OPEL','|') AS result", "result");
       assertThat( result, not(containsString(( "XYZ" ))) );
     }
     @Test
     public void shouldHandleListOfLabelsCorrectly() throws Throwable {
-      String path1 = "'BOOKING|APP|KLEINKLASSE|SHORT_DISTANCE|MULTICITY|FORD'";
-      String path2 = "'BOOKING|APP|KLEINKLASSE|SHORT_DISTANCE|MULTICITY|FORD|OPEL'";
-      String path3 = "'BOOKING|LONG_DISTANCE|INTERNET|DB|NISSAN|MITTELKLASSE'";
+      String path1 = "'BOOKING|APP|KLEINKLASSE|SHORT_DISTANCE|MULTICITY'";
+      String path2 = "'BOOKING|APP|KLEINKLASSE|SHORT_DISTANCE|LONG_DISTANCE|MULTICITY'";
+      String path3 = "'BOOKING|LONG_DISTANCE|INTERNET|DB|MITTELKLASSE'";
       String listOfPaths1 = "[" + path1 + "," + path3 + "]";
       String listOfPaths2 = "[" + path1 + "," + path2 + "]";
       List<String> result = runProcedureCallSuppliesList( "RETURN de.od2n.neo4j.ext.dbcs.bookings.processLabelsOfBookingList(" + listOfPaths1 + ",'|') AS result", "result");
       assertThat( result.get(0), not(containsString(( "NOT_SUPPORTED" ))) );
       assertThat( result.get(1), not(containsString(( "NOT_SUPPORTED" ))) );
-      assertThat( result.get(0), equalTo( "BOOKING|KLEINKLASSE|APP|MULTICITY|FORD|SHORT_DISTANCE" ) );
-      assertThat( result.get(1), equalTo( "BOOKING|MITTELKLASSE|INTERNET|DB|NISSAN|LONG_DISTANCE" ) );
+      assertThat( result.get(0), equalTo( "BOOKING|KLEINKLASSE|APP|MULTICITY|SHORT_DISTANCE" ) );
+      assertThat( result.get(1), equalTo( "BOOKING|MITTELKLASSE|INTERNET|DB|LONG_DISTANCE" ) );
       try {
         runProcedureCallSuppliesList( "RETURN de.od2n.neo4j.ext.dbcs.bookings.processLabelsOfBookingList(" + listOfPaths2 + ",'|') AS result", "result");
         fail();

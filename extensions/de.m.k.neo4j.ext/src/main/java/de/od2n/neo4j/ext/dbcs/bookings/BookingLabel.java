@@ -18,7 +18,7 @@ public enum BookingLabel {
 	 * ['CITROËN', 'FIAT', 'FORD', 'MCC', 'MERCEDES', 'MITSUBISHI', 'NISSAN', 'OPEL', 'PEUGEOT', 'RENAULT', 'TOYOTA', 'VW']
 	 * und 
 	 * 'UNKNOWN_VM'
-	 */
+	 
 	
 	UNKNOWN_VM(1000016, "UNKNOWN_VM", 1000000), 
 	FORD(1000015, "FIAT", 1000000), 
@@ -33,6 +33,7 @@ public enum BookingLabel {
 	RENAULT(1000003, "RENAULT", 1000000),
 	TOYOTA(1000002, "TOYOTA", 1000000),
 	VW(1000001, "VW", 1000000),
+	*/
 	
 	/**
 	 * Income Gruppen
