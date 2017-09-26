@@ -1,4 +1,4 @@
-package de.m.k.neo4j.ext.dbc.bookings;
+package de.od2n.neo4j.ext.dbcs.bookings;
 
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -17,6 +17,8 @@ import org.neo4j.driver.v1.GraphDatabase;
 import org.neo4j.driver.v1.Session;
 import org.neo4j.driver.v1.StatementResult;
 import org.neo4j.harness.junit.Neo4jRule;
+
+import de.od2n.neo4j.ext.dbcs.bookings.BookingLabelsProcessor;
 public class BookingLabelsProcessTest {
   // This rule starts a Neo4j instance
     @Rule

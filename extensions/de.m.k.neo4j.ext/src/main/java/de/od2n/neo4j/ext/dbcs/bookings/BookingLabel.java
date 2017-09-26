@@ -1,4 +1,4 @@
-package de.m.k.neo4j.ext.dbc.bookings;
+package de.od2n.neo4j.ext.dbcs.bookings;
 
 public enum BookingLabel {
 	
