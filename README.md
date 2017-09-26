@@ -18,7 +18,7 @@ To successfully execute the transformation on this notebook and migrate the data
 - Create the subfolder *"DB_OpenData/output"*
 - Execute the transformation in notebook *DB_OpenData/Carsharing_Data.ipynb*
 - Modify the script *DB_OpenData/scripts/loadDataToNeo4J.sh* depend on the installation folder in your environment.
-- Execute the script *DB_OpenData/scripts/loadDataToNeo4J.sh*.
+- Execute the script *DB_OpenData/scripts/loadDataToNeo4J.sh*. The script needs as parameter the path of the folder, in that the input files have been saved.
 
 After you've migrated the data to Neo4J, you can also find an example to explore this data with python-based components in the notebook *DB_OpenData/Explore_With_py2neo_NetworkX.ipynb*
 
