@@ -22,4 +22,6 @@ To successfully execute the transformation on this notebook and migrate the data
 
 After you've migrated the data to Neo4J, you can also find an example to explore this data with python-based components in the notebook *DB_OpenData/Explore_With_py2neo_NetworkX.ipynb*
 
+In the folder *extensions* you'll find custom extensions for Neo4J. Currently exists one extension (*de.m.k.neo4j.ext*), that prepares and provides data to visualize booking-informations as sankey-diagram. The component, that provides the data (JSON) for a sankey diagram can also be used for other types of nodes (see therefore the class *SankeyDataResource*). 
+
 I hope you've fun with the project. Feel free to contribute and give suggestions.
