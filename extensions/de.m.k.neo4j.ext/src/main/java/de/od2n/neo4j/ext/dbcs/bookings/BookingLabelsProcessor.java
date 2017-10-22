@@ -68,7 +68,7 @@ public class BookingLabelsProcessor {
     convertedPath = String.join(delimiter, rawPathElementsList);
     return convertedPath;
   }
-  @UserFunction
+  @UserFunction("od2n.dbcs.processLabelsOfBooking")
   @Description(
     "de.od2n.neo4j.ext.dbcs.bookings.processLabelsOfBooking('<Delimited_LabelParts>', delimiter)" + 
     "- bring the labels of a booking in correct order."
@@ -78,7 +78,7 @@ public class BookingLabelsProcessor {
     @Name(value = "delimiter", defaultValue = ",") String delimiter) {
     return processBookingInformations(labels, delimiter);
   }
-  @UserFunction
+  @UserFunction("od2n.dbcs.processLabelsOfBookingList")
   @Description(
     "de.od2n.neo4j.ext.dbcs.bookings.processLabelsOfBookingList(['<Delimited_LabelParts>','<Delimited_LabelParts>',...], delimiter)" + 
     "- bring the labels of more then one booking in correct order."

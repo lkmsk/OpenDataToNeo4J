@@ -2,12 +2,13 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.od2n</groupId>
   <artifactId>de.od2n.neo4j.ext</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2</version>
   <name>OpenData to Neo4J Extensions</name>
   <properties>
     <neo4j.version>3.2.0</neo4j.version>
-    <jackson.version>2.8.9</jackson.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
     <dependencies>
     <dependency>
@@ -40,23 +41,21 @@
       <version>2.1</version>
       <scope>provided</scope>
     </dependency>
-    <dependency>
-      <!-- Note: core-annotations version x.y.0 is generally compatible with
-         (identical to) version x.y.1, x.y.2, etc. -->
-      <groupId>com.fasterxml.jackson.core</groupId>
-      <artifactId>jackson-annotations</artifactId>
-      <version>${jackson.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.fasterxml.jackson.core</groupId>
-      <artifactId>jackson-core</artifactId>
-      <version>${jackson.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.fasterxml.jackson.core</groupId>
-      <artifactId>jackson-databind</artifactId>
-      <version>${jackson.version}</version>
-    </dependency>
+	<dependency>
+	    <groupId>javax.json.bind</groupId>
+	    <artifactId>javax.json.bind-api</artifactId>
+	    <version>1.0</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.eclipse</groupId>
+	    <artifactId>yasson</artifactId>
+	    <version>1.0</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.glassfish</groupId>
+	    <artifactId>javax.json</artifactId>
+	    <version>1.1</version>
+	</dependency>
         <!-- Test Dependencies -->
     <dependency>
       <!-- This is used for a utility that lets us start Neo4j with
@@ -96,6 +95,9 @@
           <!-- Neo4j Procedures require Java 8 -->
           <source>1.8</source>
           <target>1.8</target>
+          <excludes>
+			<exclude>**/api/test/omi/*.java</exclude>
+		  </excludes>
         </configuration>
       </plugin>
       <plugin>

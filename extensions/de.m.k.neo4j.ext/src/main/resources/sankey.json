@@ -1,0 +1,163 @@
+{
+	"diagramTitle": "Sankey",
+	"links": [
+		{
+			"source": 4,
+			"target": 13,
+			"value": 48
+		},
+		{
+			"source": 3,
+			"target": 2,
+			"value": 46
+		},
+		{
+			"source": 13,
+			"target": 9,
+			"value": 48
+		},
+		{
+			"source": 12,
+			"target": 9,
+			"value": 25
+		},
+		{
+			"source": 4,
+			"target": 11,
+			"value": 155
+		},
+		{
+			"source": 11,
+			"target": 2,
+			"value": 155
+		},
+		{
+			"source": 4,
+			"target": 3,
+			"value": 78
+		},
+		{
+			"source": 7,
+			"target": 6,
+			"value": 80
+		},
+		{
+			"source": 8,
+			"target": 12,
+			"value": 25
+		},
+		{
+			"source": 1,
+			"target": 5,
+			"value": 26
+		},
+		{
+			"source": 8,
+			"target": 7,
+			"value": 80
+		},
+		{
+			"source": 9,
+			"target": 0,
+			"value": 32
+		},
+		{
+			"source": 4,
+			"target": 8,
+			"value": 105
+		},
+		{
+			"source": 9,
+			"target": 10,
+			"value": 25
+		},
+		{
+			"source": 1,
+			"target": 0,
+			"value": 20
+		},
+		{
+			"source": 1,
+			"target": 10,
+			"value": 155
+		},
+		{
+			"source": 6,
+			"target": 5,
+			"value": 75
+		},
+		{
+			"source": 9,
+			"target": 5,
+			"value": 48
+		},
+		{
+			"source": 2,
+			"target": 1,
+			"value": 201
+		},
+		{
+			"source": 3,
+			"target": 9,
+			"value": 32
+		}
+	],
+	"nodes": [
+		{
+			"name": "LONG_DISTANCE",
+			"node": 0
+		},
+		{
+			"name": "UNKNOWN_TICHG",
+			"node": 1
+		},
+		{
+			"name": "UNKNOWN_TICHT",
+			"node": 2
+		},
+		{
+			"name": "MITTELKLASSE",
+			"node": 3
+		},
+		{
+			"name": "BOOKING",
+			"node": 4
+		},
+		{
+			"name": "MIDDLE_DISTANCE",
+			"node": 5
+		},
+		{
+			"name": "FLINKSTER",
+			"node": 6
+		},
+		{
+			"name": "APP",
+			"node": 7
+		},
+		{
+			"name": "VAN_BUSKLASSE",
+			"node": 8
+		},
+		{
+			"name": "DB",
+			"node": 9
+		},
+		{
+			"name": "SHORT_DISTANCE",
+			"node": 10
+		},
+		{
+			"name": "MINI",
+			"node": 11
+		},
+		{
+			"name": "INTERNET",
+			"node": 12
+		},
+		{
+			"name": "KOMPAKTKLASSE",
+			"node": 13
+		}
+	]
+}
